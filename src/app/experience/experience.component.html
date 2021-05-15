@@ -1,0 +1,36 @@
+<div id="general" class="">
+
+  <div id="title" class="bg-gray-200 bg-opacity-75 p-5">
+    <h1 class="font-bold mb-1 uppercase text-lg">Experiencia</h1>
+    <p>Diferentes empresas</p>
+  </div>
+
+  <div id="description" class="bg-gray-100 bg-opacity-25 p-5">
+
+    <div class="flex h-full" *ngFor="let company of allCompanies, let i = index">
+
+      <div class="w-5 mt-5">
+        <div class="height-ball">
+          <div class="h-5 w-5 rounded-full border-2 bg-green-400 mr-5"></div>
+        </div>
+        <div class="height-line">
+          <div class="bg-gray-200 ml-2 w-1 h-full"></div>
+        </div>
+      </div>
+
+      <div class="w-full mt-5">
+        <p class="text-xs mt-1 ml-5">{{company.duration}}</p>
+
+        <h1 class="font-bold mb-1 uppercase text-lg mt-5 ml-5">{{company.name}}</h1>
+        <h2 class="mb-1 text-sm text-black text-opacity-50 ml-5">{{company.job}}</h2>
+        <h3 class="mb-1 text-xs text-black text-opacity-30 ml-5">{{company.location}}</h3>
+
+        <div class="text-sm ml-5 mr-5 mt-2 mb-2" *ngFor="let experience of company.experience">
+          <p class="">{{experience}}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
