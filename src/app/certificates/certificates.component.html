@@ -1,0 +1,70 @@
+<hr>
+
+<div id="general" class="lg:flex | divide-gray-200 lg:divide-x">
+
+  <div id="title" class="lg:w-2/5 | lg:bg-opacity-50 bg-gray-200 bg-opacity-75 | p-5 sm:p-10 | lg:px-16 lg:py-10 | lg:text-right">
+    <h1 class="font-bold mb-1 uppercase text-lg">Certificaciones</h1>
+    <p>Licencias y cursos</p>
+  </div>
+
+  <div id="description" class="lg:w-3/5 | lg:bg-opacity-50 bg-gray-100 bg-opacity-25 | p-5 sm:p-10 | lg:px-16 lg:py-10">
+
+    <div class="flex h-full lg:h-auto" *ngFor="let certificate of allCertificates, let i = index">
+
+      <div *ngIf="i == 0" class="w-5 | mt-5 lg:mt-0">
+        <div class="height-ball">
+          <div class="h-5 w-5 rounded-full border-2 bg-green-400 mr-5"></div>
+        </div>
+        <div class="height-line">
+          <div class="bg-gray-200 ml-2 w-1 h-full"></div>
+        </div>
+      </div>
+
+      <div *ngIf="i == 0" class="w-full | mt-5 lg:mt-0">
+        <p class="text-xs mt-1 ml-5">{{certificate.duration}}</p>
+
+        <a *ngIf="certificate.url" [href]="certificate.url" target="_blank" rel="noopener noreferrer">
+            <h1 class="font-bold mb-1 uppercase text-lg mt-5 ml-5">
+                <i *ngIf="certificate.url" class="fas fa-graduation-cap"></i> {{certificate.name}}
+            </h1>
+        </a>
+        
+        <h1 *ngIf="!certificate.url" class="font-bold mb-1 uppercase text-lg mt-5 ml-5">
+            <i *ngIf="certificate.url" class="fas fa-graduation-cap"></i> {{certificate.name}}
+        </h1>
+        
+        <h2 class="mb-1 text-sm text-black text-opacity-50 ml-5">{{certificate.company}}</h2>
+      </div>
+
+
+      <div *ngIf="i != 0" class="w-5 | mt-5">
+        <div class="height-ball">
+          <div class="h-5 w-5 rounded-full border-2 bg-green-400 mr-5"></div>
+        </div>
+        <div class="height-line">
+          <div class="bg-gray-200 ml-2 w-1 h-full"></div>
+        </div>
+      </div>
+
+      <div *ngIf="i != 0" class="w-full | mt-5">
+        <p class="text-xs mt-1 ml-5">{{certificate.duration}}</p>
+
+        <a *ngIf="certificate.url" [href]="certificate.url" target="_blank" rel="noopener noreferrer">
+            <h1 class="font-bold mb-1 uppercase text-lg mt-5 ml-5">
+                <i *ngIf="certificate.url" class="fas fa-graduation-cap"></i> {{certificate.name}}
+            </h1>
+        </a>
+        
+        <h1 *ngIf="!certificate.url" class="font-bold mb-1 uppercase text-lg mt-5 ml-5">
+            <i *ngIf="certificate.url" class="fas fa-graduation-cap"></i> {{certificate.name}}
+        </h1>
+
+        <h2 class="mb-1 text-sm text-black text-opacity-50 ml-5">{{certificate.company}}</h2>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
