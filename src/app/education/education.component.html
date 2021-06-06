@@ -2,12 +2,12 @@
 
 <div id="general" class="lg:flex | divide-gray-200 lg:divide-x">
 
-  <div id="title" class="lg:w-1/4 | bg-gray-200 bg-opacity-75 | p-5">
+  <div id="title" class="lg:w-2/5 | bg-gray-200 bg-opacity-75 | p-5 sm:p-10 | lg:px-16 lg:py-10 | lg:text-right">
     <h1 class="font-bold mb-1 uppercase text-lg">Estudios</h1>
     <p>Formación realizada</p>
   </div>
 
-  <div id="description" class="lg:w-3/4 | bg-gray-100 bg-opacity-25 | p-5">
+  <div id="description" class="lg:w-3/5 | bg-gray-100 bg-opacity-25 | p-5 sm:p-10 | lg:px-16 lg:py-10">
 
     <div class="flex h-full lg:h-auto" *ngFor="let institute of allInstitutes, let i = index">
 
@@ -23,8 +23,8 @@
       <div class="w-full | mt-5 lg:mt-0">
         <p class="text-xs mt-1 ml-5">{{institute.duration}}</p>
 
-        <h1 class="font-bold mb-1 uppercase text-lg mt-5 ml-5">{{institute.centerName}}</h1>
-        <h2 class="mb-1 text-sm text-black text-opacity-50 ml-5">{{institute.studyName}}</h2>
+        <h1 class="font-bold mb-1 uppercase text-lg mt-5 ml-5">{{institute.studyName}}</h1>
+        <h2 class="mb-1 text-sm text-black text-opacity-50 ml-5">{{institute.centerName}}</h2>
         <h3 class="mb-1 text-xs text-black text-opacity-30 ml-5">{{institute.level}}</h3>
       </div>
 
