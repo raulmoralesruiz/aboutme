@@ -1,7 +1,11 @@
-// #general {}
+@media (orientation: landscape) and (max-height : 500px) {
 
-/* ----------- */
+    #foto {
+        width: 9rem;
+        height: 9rem;
+    }
 
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
