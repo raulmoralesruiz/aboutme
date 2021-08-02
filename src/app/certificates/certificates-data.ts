@@ -2,6 +2,12 @@ import { CertificateInterface } from './certificates.interface';
 
 export let certificates: CertificateInterface[] = [
   {
+    name: 'M001: MongoDB Basics',
+    company: 'MongoDB',
+    duration: 'Julio 2021',
+    url: 'https://university.mongodb.com/course_completion/1e0a179a-7373-43ea-a71e-6ebe5648a450',
+  },
+  {
     name: 'Angular Advanced: Best Practices',
     company: 'Pluralsight',
     duration: 'Abril 2021',
@@ -10,6 +16,16 @@ export let certificates: CertificateInterface[] = [
     name: 'Flask: Getting Started',
     company: 'Pluralsight',
     duration: 'Abril 2021',
+  },
+  {
+    name: 'Ionic 6+: Crear aplicaciones IOS, Android y PWAs con Angular',
+    company: 'Udemy',
+    duration: 'Marzo 2021',
+  },
+  {
+    name: 'Angular: De cero a experto',
+    company: 'Udemy',
+    duration: 'Enero 2021',
   },
   {
     name: 'Programación asíncrona con promises en JavaScript',
